@@ -2,6 +2,9 @@
 Python Koans
 ============
 
+PLEASE NOTE: THIS IS A FORKED BRANCH. IT CONTAINS THE RESULTS FOR EACH TEST.
+
+
 .. image:: https://travis-ci.org/gregmalcolm/python_koans.png?branch=master
    :target: http://travis-ci.org/gregmalcolm/python_koans
 
