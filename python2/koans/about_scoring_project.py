@@ -34,8 +34,22 @@ from runner.koan import *
 # Your goal is to write the score method.
 
 def score(dice):
-    # You need to write this method
-    pass
+    result = 0
+    # if there has been no dice roll score the game and return the result
+    if len(dice) == 0: 
+        return result
+    # count the amount of of times 1 or 5 occurs and score the result
+    # according to the amount.
+    result += [0, 100, 200, 1000, 1100, 1200, 2000, 2100, 2200, 3000][dice.count(1)]
+    result += [0, 50, 100, 500, 550, 600, 650, 700, 750][dice.count(5)]
+    # go through each element but 1 or 5 and check to see if the count is 3.
+    # if it is multiply that element by 100 and add it to the result
+    for num in [2,3,4,6]:
+        if (dice.count(num) / 3) == 1:
+            result += num * 100 
+    return result
+    
+    #pass
 
 
 class AboutScoringProject(Koan):
